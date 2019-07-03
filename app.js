@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const urlEncoded = bodyParser.urlencoded({extended: false})
 
-const dummyData = [{taskItem: "Work on my portfolio" },{taskItem: "Code and watch anime"},{taskItem: "Sleep"}];
+const dummyData = [{title: "Work on my portfolio", blog: "Stuff" }];
 
 // setting up
 const app = express();
@@ -25,11 +25,11 @@ app.get('/Post', function (req, res) {
 
 // Post for tasks: posting a task
 app.post('/Post', urlEncoded, function(req, res){
-  console.log("hitting Post route");
+  // console.log(req.body);
   let incomingItem = {}
-  incomingItem.taskItem = req.body.task
+  incomingItem.title = req.body.title;
+  incomingItem.blog = req.body.blog;
   dummyData.push(incomingItem)
-  console.log(dummyData)
   res.redirect('/Post')
 });
 

@@ -14,18 +14,17 @@
     <form action="/Post" method="POST">
         <div class="form-group">
           <label for="formGroupExampleInput">Title</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Insert Title Here">
+          <input name="title" type="text" class="form-control" id="formGroupExampleInput" placeholder="Insert Title Here">
         </div>
         <div class="form-group">
           <label for="formGroupExampleInput2">Post</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          <p align ="right">
-            <button type="button" class="btn btn-secondary btn-lg btn-block">Submit</button>
-          </p>
+          <textarea name= "blog" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
+        <button type="submit" class="btn btn-secondary btn-lg btn-block">Submit</button>
     </form>
     <% for ( let i=0; i < taskToDo.length;  i++ ){%>
-        <li class="list-group-item" id="<%= i %>" ><%= taskToDo[i].taskItem %></li>
+        <li class="list-group-item" id="<%= i %>" ><%= taskToDo[i].title %></li>
+        <li class="list-group-item" id="<%= i %>" ><%= taskToDo[i].blog %></li>
     <% } %>
     </div>
     <script src="js/main.js"></script>
