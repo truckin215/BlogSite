@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Connors Blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <h1 class="text-center">Connor's Blog</h1>
+    <div id="margin">
+    <form action="/Post" method="POST">
+        <div class="form-group">
+          <label for="formGroupExampleInput">Title</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Insert Title Here">
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Post</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <p align ="right">
+            <button type="button" class="btn btn-secondary btn-lg btn-block">Submit</button>
+          </p>
+        </div>
+    </form>
+    <% for ( let i=0; i < taskToDo.length;  i++ ){%>
+        <li class="list-group-item" id="<%= i %>" ><%= taskToDo[i].taskItem %></li>
+    <% } %>
+    </div>
+    <script src="js/main.js"></script>
+</body> 
+</html>
