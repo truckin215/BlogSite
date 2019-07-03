@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Connors Blog</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
 </head>
@@ -22,6 +23,7 @@
         </div>
         <button type="submit" class="btn btn-secondary btn-lg btn-block">Submit</button>
     </form>
+    <br>
     <% for ( let i=0; i < taskToDo.length;  i++ ){%>
         <li class="list-group-item" id="<%= i %>" ><%= taskToDo[i].title %></li>
         <li class="list-group-item" id="<%= i %>" ><%= taskToDo[i].blog %></li>

@@ -2,3 +2,7 @@ body {
     background-color: orange;
     margin: 50px 100px;
 }
+
+h1 {
+    font-family: 'Pacifico', cursive;
+}
