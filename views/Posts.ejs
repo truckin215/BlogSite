@@ -24,9 +24,9 @@
         <button type="submit" class="btn btn-secondary btn-lg btn-block">Submit</button>
     </form>
     <br>
-    <% for ( let i=0; i < taskToDo.length;  i++ ){%>
-        <li class="list-group-item" id="<%= i %>" ><%= taskToDo[i].title %></li>
-        <li class="list-group-item" id="<%= i %>" ><%= taskToDo[i].blog %></li>
+    <% for ( let i=0; i < blogPost.length;  i++ ){%>
+        <li class="list-group-item font-weight-bold" id="<%= blogPost[i].ID  %>" ><%= blogPost[i].title %></li>
+        <li class="list-group-item" id="<%= blogPost[i].ID %>" ><%= blogPost[i].post %></li>
     <% } %>
     </div>
     <script src="js/main.js"></script>
